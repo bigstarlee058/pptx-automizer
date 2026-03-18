@@ -10,8 +10,8 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "tsc",
-    "dev": "nodemon -e ts --exec 'ts-node' src/dev.ts",
+    "build": "node api.js && tsc",
+    "dev": "node api.js && nodemon -e ts --exec 'ts-node' src/dev.ts",
     "test": "npx jest",
     "test-coverage": "npx jest --coverage",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --fix",
