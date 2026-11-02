@@ -10,8 +10,8 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "node api.js && tsc",
-    "dev": "node api.js && nodemon -e ts --exec 'ts-node' src/dev.ts",
+    "build": "node init && tsc",
+    "dev": "node init && nodemon -e ts --exec 'ts-node' src/dev.ts",
     "test": "npx jest",
     "test-coverage": "npx jest --coverage",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --fix",
@@ -59,8 +59,10 @@
   },
   "dependencies": {
     "@xmldom/xmldom": "^0.9.8",
+    "dotenv": "^8.2.0",
     "extract-zip": "^2.0.1",
     "jszip": "^3.10.1",
+    "node-fetch": "^3.3.2",
     "pptxgenjs": "^3.12.0",
     "regexp.escape": "^1.1.0",
     "slugify": "^1.6.6"
